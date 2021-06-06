@@ -9,7 +9,7 @@ export default function Home() {
     <div>
       <Navbar /> 
         
-          <h1> Home page </h1>
+          <h1> Find the best remote companies to work for</h1>
 
       <footer /> 
     </div>
