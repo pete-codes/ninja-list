@@ -1,404 +1,82 @@
 body {
   font-family: Lato, sans-serif;
   background-color: #0d162b;
-  color:#f7f7f7;
+  color:#fff;
   padding-top: 20px;
+
 }
 
-#about:link, a {
-  color:#fff;
+.navbar {
+  margin: 10px auto 80px;
+  padding: 10px 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  border-bottom: 1px solid #ddd;
 }
 
-.logo {
-  padding:10px;
-  border: 2px solid white;
-  border-radius: 10px 0 10px 0;
+h1, p {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 24px;
+  padding-top: 25px;
 }
 
-.about, .about:hover {
-  border: 5px solid #ea425e;
-  border-radius: 10px 0 10px 0;
-  padding:10px;
-  font-weight: 700;
+P {
+  max-width: 800px;
+}
+.btn {
+  width:200px;
+  height:50px;
+  border-radius:5px;
+  border:1px solid transparent;
+  color: #0d162b;
   text-transform: uppercase;
-  line-height: 34px;
-  /* background-color: #ea425e; */
-}
-
-/* background-color: #ea425e; */
-
-#introText {
-  font-size: 21px;
-}
-
-.companyProfileIntro {
-  font-size: 18px;
-}
-
-.navbar-nav {
+  PADDING: 0 25PX;
+  margin: 25px 25px;
+  text-align: center;
+  font-size: 24px;
   
 }
 
-
-h1 {
-  color: #fff;
-  font-size: 46px;
+.btn:hover {
+  cursor:pointer; 
 }
-
-
-p {
-  font-size: 21px;
-    font-weight: 400;
-    text-align: left;
-}
-
-.AboutBox {
-  max-width:800px;
-  margin: 0 auto;
-  color:#fff;
-  font-size: 21px;
-
-}
-
-.profile {
-  border-radius: 50%;
-  
-  top: 50%; 
-  left: 50%; 
-  margin: 0 auto;
-}
-
-#profile {
-  text-align: center;
-  margin-top: 25px;
-}
-
-.hidden {
-  display:none !important;
-  background-color: #17860f;
-  color:#fff;
-  border: 1px solid #17860f;
-  border-radius: 5px;
-}
-email-CTA {
-  text-align: center;
-  margin: 0 auto;
-}
-
-a:hover {
-  text-decoration:none !important;
-}
-
-#hiringButton:visited {
+a {
+  color:white;
+  padding: 0 25px;
+  font-size: large;
   text-decoration:none;
 }
 
-#mc_embed_signup {
-  background-color: #0d162b;
-}
 
-#mc_embed_signup input.email, #mc_embed_signup .button {
-  margin: 0 auto !important;
-  text-align: center;
-  width:35%;
-  font-size: 18px;
+.even-col {
+  display:flex; 
 }
-#mc_embed_signup .button, #mc_embed_signup .button:hover   {
-  background-color: #ea425e;
-  border-radius: 0 0 10px 0;
   
-}
-
-
-#buttonToggle {
- 
-    color: #D3D3D3;
-    padding:5px;
-    width:10%;
-    margin-left:-45px;
-    
-}
-#buttonToggle:hover {
- color:#FFF;
   
-}
-
-
-h1, h2, p, #buttonToggle {
-  text-align: center;
-}
-
-/* p {
-  margin: 0 auto;
-} */
-
-
-
-h2 {
-  padding-top: 20px;
-}
-
-#emailForm {
-  text-align: center;
-  margin: 0 auto;
-}
-form-inline {
-  margin: 0 auto;
-  text-align: center;
-}
+  /* flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%; */
+/* 
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  list-style: none;
+  padding: 0; */
 
 
 .card {
-
+  display: block;
   
-  border-radius: 16px !important;
-
+  height: 100%;
+  text-decoration: none;
+  font-size: 22px;
 }
 
-.card:hover {
-  /* box-shadow: rgba(253, 253, 253, 0.2) 0px 2px 8px !important; */
-  
-}
+.recipe-card img {
+  height:300px;
+  object-fit: cover;
+  display:block;
 
-.navbar-light .navbar-nav .nav-link {
-    /* color:#000; */
-    text-transform: uppercase;
-    font-weight: 500;
-    padding-left: 30px;
-    padding-right: 30px;
-    margin-right: 30px;
-    color:#fff !important;
-
-}
-
-
-.card:hover {
-  cursor: pointer;
-  box-shadow: none;
-  -ms-transform: scale(1.05); /* IE 9 */
-  -webkit-transform: scale(1.05); /* Safari 3-8 */
-  transform: scale(1.05);
-
-}
-
-.card-img-top {
-    width: 100%;
-    height: 15vw;
-    object-fit: cover;
-}
-/* .navbar-light .navbar-nav .nav-link:hover */
-
-/* for each company profile */
-
-.companyProfileText {
-  color:#fff;
-  margin: 0 auto;
-  text-align: left;
-  padding: 15px 50px;
-  font-size: 21px;
-}
-
-#dynamicInfo, .companyCTA {
-  margin-bottom: 25px;
-}
-
-
-
-
-#seeMore {
-  color:#fff;
-  margin: 0 auto;
-  text-align: center;
-  padding-left: 120px
-}
-
-.aboutHome {
-  padding-bottom: 25px;
-}
-
-#seeMore:link {
-  border: #fff 2px solid;
-}
-
-#text {
-  color:#fff;
-}
-
-#jobs {
-
-    background-size: contain;
-    color:#000;
-
-}
-
-#hire {
-
-  color:#ff0e0e;
-  border:2px solid #ff0e0e;
-  text-transform: uppercase;
-  font-weight: 500;
-  padding-left: 30px;
-  padding-right: 30px;
-  margin-right: 30px;
-
-}
-
-#hire:hover {
-  background-color: #fff;
-}
-
-.custom, .custom:hover {
-  color: #fff !important;
-  /* background-color: #0f204a; 
-  background-image: url(waves-2.svg); */
-  background-color:#0d162b;
-  margin: 0 25px;
-}
-
-.iconButton {
- color:#0d162b;
-}
-
-.fas {
-  padding-left: 5px;
- 
-}
-.container {
-  margin-top: 25px
-}
-
-.card {
-   margin-bottom: 35px;
-  /* margin: 0 auto; */
-  /* height:200px; */
-}
-
-.hide {
-  display:none;
-}
-
-.hide:hover {
-  display:contents;
-}
-.filter-box {
-  /* border: 5px solid transparent;
-  border-radius: 5px; */
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 8px !important;
-  padding:0;
-
-}
-
-
-
-
-.btn-primary, btn-primary:hover {
-    color:#0d162b;
-    background-color:#f7f7f7;
-    /* :#31263E; */
-    border-color:#000;
-   
-      border-radius: 5px 0 10px 0;
-  
-    width:100%;
-
-  }
-
-.btn-success  {
-  width:100%;
-}
-
-.profileIcon {
-  color:#fff;
-}
-
-/* jobs board */
-
-.card-body-jobs {
-  width:1000px;
-  height:150px;
-  padding:25px;
-}
-
-
-.card-horizontal {
-  display: flex;
-  flex: 1 1 auto;
-}
-
-.img-job {
-  width:150px;
-  height:150px;
-}
-
-/* bootcamps  */
-   .bootcampLink {
-     color:white;
-   }
-
-   .bootcampLink:hover {
-     color:white;
-     text-decoration:none;
-   }
-
-   .modal-footer {
-     margin: 0 auto;
-   }
-
-   .more-info {
-     margin: 0 auto;
-
-   }
-
-   h3 {
-     text-align:center;
-   }
-
-  .row {
-    margin:10px;
-  }
-
-#reset {
-  width:900px;
-  background-color: #31263E;
-}
-
-.btn-success {
-  background-color:#ea425e;
-  border:none;
-  
-}
-
-body {
-  margin-bottom: 0 auto;
-}
-
-.nav-item {
-  color:#fff;
-
-}
-  .navbar-expand-lg {
-    padding-left: 200px;
-    
-    height:70px;
-  }
-
-  .filter-extra-buttons {
-    padding-left: 200px;
-  }
-
-  @media (min-width: 768px)
-.col-md-4 {
-
-    padding-bottom: 20px;
-}
-
-#PostYourCompany {
-  position: fixed;
-   top: 1em;
-   right: 1em;
-       z-index: 10;
-       border: 2px solid red;
-       padding:5px;
-  color:white;
-  background-color: red;
 }

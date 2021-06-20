@@ -1,14 +1,15 @@
 import Link from 'next/link'
-
+import Image from 'next/image'
 const Navbar = () => {
     return ( 
-        <nav> <h1> Remote Companies</h1>
+        <div className="navbar"> 
+           
         
         <Link href="/"><a>Home</a></Link>
         <Link href="/about"><a>About</a></Link>
+      
+        </div>
        
-        
-        </nav>
      );
 }
  
