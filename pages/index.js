@@ -1,80 +1,40 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import Navbar from '../comps/Navbar'
-import emailsignup from '../comps/emailsignup'
+import { useState } from 'react'
+import Navbar from "../comps/Navbar";
 
-import footer from '../comps/footer'
+import Link from "next/link";
 
-import Link from 'next/link'
-
-export const getStaticProps = async () => {
-  const res = await fetch('https://jsonplaceholder.typicode.com/users');
-  const data = await res.json();
-
-  return {
-    props: { ninjas: data }
-  }
-}
-
-const Ninjas = ({ ninjas }) => {
-   console.log(ninjas)
-
+export default function IndexPage({ ninjas }) {
+  const [ selectedCountry, setSelectedCountry ] = useState(null)
   return (
     <div>
-         <Navbar /> 
-     <h1> Find the best remote companies to work for </h1> 
-     <button className="btn"> Global </button>
-     <button className="btn"> US </button>
-     <button className="btn"> UK </button>
-      {ninjas.map(ninja => (
-        <Link href={'/' + ninja.id} key={ninja.id}>
+      <Navbar />
+      <h1> Find the best remote companies to work for</h1>
+      <button className="btn" onClick={() => setSelectedCountry(null)}> Global </button>
+      <button className="btn" onClick={() => setSelectedCountry('USA')}> USA </button>
+      <button className="btn" onClick={() => setSelectedCountry('UK')}> UK </button>
+
+      <Link href="/countries/USA"><a>USA PAGE</a></Link>
+
+      {ninjas.filter(n => selectedCountry ? n.country === selectedCountry : true).map((ninja) => (
+        <Link href={"/" + ninja.id} key={ninja.id}>
           <a>
-            <div className="even-col"> 
-            <h3>{ ninja.name }</h3>
+            <div className="even-col">
+              <h3>{ninja.name}, {ninja.country}</h3>
             </div>
-            
           </a>
         </Link>
       ))}
-    
     </div>
   );
 }
 
-export default Ninjas;
+export async function getStaticProps () {
+  const res = await fetch("https://jsonplaceholder.typicode.com/users");
+  const data = await res.json();
 
-// export default function Home() {
- 
-//   const pizzas = [
+  const dataWithCountry = data.map((user, i) => Object.assign(user, { country: i % 2 === 1 ? 'USA' : 'UK' }))
 
-
-//     {
-//       id:'1',
-//       name:'ghost',
-//       slug:'remote-companies-ghost'
-
-//     },
-
-//     {
-//       id:'2',
-//       name:'podia',
-//       slug:'remote-companies-podia'
-
-//     },
-
-//     {
-//       id:'3',
-//       name:'mailerlite',
-//       slug:'remote-companies-mailerlite'
-
-//     }
-//   ]
-
-//   return (
-    
-//     <div> 
-//    
-   
-//             )
-
-// }
+  return {
+    props: { ninjas: dataWithCountry },
+  };
+}
